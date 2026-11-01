@@ -1,0 +1,128 @@
+/* =========================================
+   RESET DASAR
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #d1d5db; 
+}
+
+/* =========================================
+   ID SELECTOR & BOX MODEL (Margin, Padding, Border)
+   ========================================= */
+#header-website {
+    background-color: #000000;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 80px; 
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #222222;
+}
+
+#kartu-profil {
+    /* Height & Width */
+    width: 65%;
+    min-height: 300px;
+    
+    /* Margin untuk posisi ke tengah (auto) dan margin negatif di atas */
+    margin: -40px auto 40px auto; 
+    /* Padding untuk jarak ke dalam */
+    padding: 40px;
+    
+    background-color: #1a1a1a; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 255, 204, 0.05);
+}
+
+/* =========================================
+   CLASS SELECTOR & TEXT STYLING
+   ========================================= */
+.teks-judul {
+    /* Text transform & Letter spacing */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.teks-subjudul {
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #00ffcc; 
+}
+
+.judul-kartu {
+    /* Text alignment & Text decoration */
+    text-align: left;
+    text-decoration: none;
+    
+    /* Compiling Font (Shorthand): style variant weight size/line-height family */
+    font: normal small-caps bold 26px/1.5 'Segoe UI', sans-serif;
+    
+    color: #ffffff;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   FLOATING ELEMENTS
+   ========================================= */
+.foto-lingkaran {
+    /* Float melayang ke kiri */
+    float: left;
+    
+    /* Box Model */
+    width: 110px;
+    height: 110px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    
+    /* Memastikan foto proporsional di dalam lingkaran (tidak gepeng) */
+    object-fit: cover; 
+    
+    /* Border properties terpisah */
+    border-width: 3px;
+    border-style: solid;
+    border-color: #00ffcc;
+    border-radius: 50%;
+    
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+/* =========================================
+   TEXT INDENTION
+   ========================================= */
+.deskripsi-teks {
+    /* Text indent masuk ke dalam di awal paragraf */
+    text-indent: 40px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+/* Membersihkan area setelah elemen float agar kartu tidak terpotong */
+.konten-utama::after {
+    content: "";
+    display: table;
+    clear: both;
+}
